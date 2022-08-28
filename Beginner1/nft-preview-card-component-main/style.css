@@ -87,6 +87,12 @@ h6 {
     margin-inline: 30px;
     padding: 20px;
     border-radius: 15px;
+    position: relative;
+}
+
+.images:hover
+{
+    cursor: pointer;
 }
 
 .img
@@ -94,6 +100,21 @@ h6 {
     border-radius: 15px;
     margin-bottom: 20px;
 }
+
+.view-icon
+{
+    visibility: hidden;
+    position: absolute;
+    top: 135px; 
+    left: 135px;
+    z-index: 99;
+}
+
+.images:hover>.view-icon
+{
+    visibility: visible;
+}
+
 
 .title
 {
@@ -103,6 +124,7 @@ h6 {
     width: 100%;
     margin-bottom: 15px;
 }
+
 
 .description
 {
@@ -179,6 +201,12 @@ h6 {
 .Copytext span
 {
     color: white;
+}
+
+.title:hover,.Copytext span:hover
+{
+    color: var(--color-primary-400);
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 1366px) 
