@@ -1,0 +1,196 @@
+/*--------------------------------------------------------------*/
+/*Css RESET*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --color-primary-100: hsl(215, 51%, 70%);
+    --color-primary-400: hsl(178, 100%, 50%);
+    --color-neutral-500: hsl(215, 32%, 27%);
+    --color-neutral-700: hsl(216, 50%, 16%);    --color-neutral-900: hsl(217, 54%, 11%);
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+}
+
+
+
+.container
+{
+    height:100%;
+    background-color: var(--color-neutral-900);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card
+{
+    background-color: var(--color-neutral-700);
+    display: grid;
+    grid-template-columns: 1;
+    justify-items: center;
+    margin-inline: 30px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.img
+{
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.title
+{
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.description
+{
+    color: var(--color-primary-100);
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-left: 2px;
+}
+
+.priceNtime
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 15px;
+}
+
+.price,
+.time
+{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.priceText
+{
+    color: var(--color-primary-400);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.timeText
+{
+    color: var(--color-primary-100);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.line
+{
+    border:none;
+    background-color: var(--color-neutral-500);
+    height: 1px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.Copyright
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar
+{
+    border: 1px solid white;
+    border-radius:50%;
+    width:30px; 
+    height:30px;
+}
+
+.Copytext
+{
+    color: var(--color-primary-100);
+    font-weight: 300;
+}
+
+.Copytext span
+{
+    color: white;
+}
+
+@media only screen and (min-width: 1366px) 
+{
+    .card
+    {
+        max-width: 21rem;
+    }
+    .text
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
