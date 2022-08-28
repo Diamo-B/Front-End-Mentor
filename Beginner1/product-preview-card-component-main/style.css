@@ -1,0 +1,247 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+:root
+{
+    max-width: 1440px;
+    min-width: 375px;
+    --color-primary-100: hsl(30, 38%, 92%);
+    --color-primary-400: hsl(158, 36%, 37%);
+
+    --color-neutral-0 : hsl(0, 0%, 100%);
+    --color-neutral-700:hsl(228, 12%, 48%);
+    --color-neutral-900:hsl(212, 21%, 14%);
+
+    font-size: 14px;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-primary-100);
+}
+
+.card
+{
+    background-color: var(--color-neutral-0);
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-inline: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.img
+{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.details
+{
+    margin-inline: 20px;
+}
+
+.title
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--color-neutral-700);
+    margin-bottom: 10px;
+}
+
+.productName
+{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.description
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--color-neutral-700);
+    margin-bottom: 20px;
+}
+
+.price
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.actual
+{
+    color: var(--color-primary-400);
+    font-family: 'Fraunces', 'serif';
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.discount
+{
+    color: var(--color-neutral-700);
+    text-decoration: line-through;
+}
+
+.card a
+{
+    text-decoration: none;
+}
+
+.submit
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.submit button
+{
+    width: 100%;
+    background-color: var(--color-primary-400);
+    border: none;
+    border-radius: 10px;
+    padding-block:15px;
+}
+
+.submit button a
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: var(--color-neutral-0);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+@media screen and (min-width:1366px)  
+{
+    .card
+    {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        
+    }    
+    .img
+    {
+        content:url("images/image-product-desktop.jpg");
+        margin: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .title
+    {
+        margin-top: 15px;
+    }
+
+    .productName
+    {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+
+    .description
+    {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .price
+    {
+        margin-bottom: 20px;
+    }
+
+}
