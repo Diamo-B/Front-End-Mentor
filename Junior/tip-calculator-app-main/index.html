@@ -18,39 +18,39 @@
   <div class="card">
     <div class="bill">
       <h2 class="title">bill</h2>
-      <img class="dollar" src="images/icon-dollar.svg" alt="" aria-hidden="true">
+      <img class="icon" src="images/icon-dollar.svg" alt="" aria-hidden="true">
       <input type="text" name="" id="billAmount" placeholder="0">
     </div>
 
     <div class="tips">
       <h2 class="title">Select Tip %</h2>
       <div class="tipsbox">
-        <button class="percent" value="5"  onclick="percentValue(this)">5%</button>
-        <button class="percent" value="10" onclick="percentValue(this)">10%</button>
-        <button class="percent" value="15" onclick="percentValue(this)">15%</button>
-        <button class="percent" value="25" onclick="percentValue(this)">25%</button>
-        <button class="percent" value="50" onclick="percentValue(this)">50%</button>
-        <input type="text" name="" id="" placeholder="Custom">
+        <button class="percent off" value="5" >5%</button>
+        <button class="percent off" value="10">10%</button>
+        <button class="percent off" value="15">15%</button>
+        <button class="percent off" value="25">25%</button>
+        <button class="percent off" value="50">50%</button>
+        <input type="text" name="" id="customTip" placeholder="Custom">
       </div>
     </div>
-
+    
     <div class="ppl">
       <h2 class="title">Number <span>of</span> People</h2>
-      <img src="images/icon-person.svg" aria-hidden="true" alt="">
-      <input type="text" name="" id="">
+      <img class="icon" src="images/icon-person.svg" aria-hidden="true" alt="">
+      <input type="text" name="" id="ppl">
     </div>
-
+    
     <div class="total">
       <div class="amount">
         <h2 class="amount-title">Tip Amount<br><span>/ person</span></h2>
-        <p class="amount-value">$4.27</p>
+        <p class="amount-value">$<span id="tip">0.00</span></p>
       </div>
 
       <div class="amount">
         <h2 class="amount-title">Total<br><span>/ person</span></h2>
-        <p class="amount-value">$32.79</p>
-      </div>
-      <button class="reset">reset</button>
+        <p class="amount-value">$<span id="total">0.00</span></p>
+      </div> 
+      <button class="reset" onclick="reset()">reset</button>
     </div>
   </div>
 
