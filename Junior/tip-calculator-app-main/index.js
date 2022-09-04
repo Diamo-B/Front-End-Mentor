@@ -52,6 +52,18 @@ let ppl = document.getElementById('ppl');
 
 const pplHandeler = function(e) {
   pplNumber = e.target.value;
+  console.log(pplNumber);
+  let pplError = document.getElementById("pplError");
+  if (parseInt(pplNumber) <= 0) 
+  {
+    ppl.style.outline = '2px solid red';
+    pplError.classList.remove('hidden');
+  }
+  else
+  {
+    ppl.style.outline = '2px solid var(--clr-primary-strongCyan-400)';
+    pplError.classList.add('hidden');
+  }
   calculate();
 }
 ppl.addEventListener('input', pplHandeler);
@@ -61,24 +73,19 @@ function calculate()
 {
   let Tp;
   let Tot;
+
   if (billAmount!==0 && pplNumber!==0) 
   {
-    console.log('hey');
     Tp=(billAmount*tipAmount/100/pplNumber).toFixed(2);
     Tot=(billAmount/pplNumber).toFixed(2);
   }
-
   if (Tp!==undefined && Tot!==undefined && Tp !== Infinity && Tot !== Infinity) 
   {
-    console.log('hello');
-
     tip.innerHTML = Tp;
     total.innerHTML = Tot;
   }
   else
   {
-    console.log('hi');
-
     tip.innerHTML = "0.00";
     total.innerHTML = "0.00";
   }

@@ -127,6 +127,21 @@ body
     font-size: 1rem;
 }
 
+.title-box
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.red
+{
+    color: red;
+}
+
+.hidden
+{
+    display: none;
+}
 #billAmount, #ppl
 {
     cursor: pointer;
