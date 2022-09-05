@@ -79,7 +79,8 @@ function calculate()
     Tp=(billAmount*tipAmount/100/pplNumber).toFixed(2);
     Tot=(billAmount/pplNumber).toFixed(2);
   }
-  if (Tp!==undefined && Tot!==undefined && Tp !== Infinity && Tot !== Infinity) 
+  if 
+  (Tp!==undefined && Tot!==undefined && Tp !== Infinity && Tot !== Infinity)
   {
     tip.innerHTML = Tp;
     total.innerHTML = Tot;
