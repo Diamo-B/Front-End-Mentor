@@ -1,0 +1,48 @@
+
+/*''''''''''''''''''''''''''''Css Variables''''''''''''''''''''''''''''''''''''''''*/
+
+/*Theme 2 Colors*/
+  
+
+:root
+{
+    
+    /*'''''''''''''''''''''''''Backgrounds''''''''''''''''''''''''''''''''''''*/
+    
+    --clr-background-main: hsl(0, 0%, 90%);
+    --clr-background-keypad--toogle: hsl(0, 5%, 81%);
+    --clr-background-screen: hsl(0, 0%, 93%);
+
+    /*'''''''''''''''''''''''''Keys''''''''''''''''''''''''''''''''''''*/
+
+    /*
+        - Normal keys
+    */
+    --clr-background-keys: hsl(45, 7%, 89%);
+    --clr-shadow-keys: hsl(35, 11%, 61%);
+    --clr-hover-keys: hsl(45, 7%, 100%);
+    /*
+        - del & reset keys
+    */
+    --clr-background-key-blue: hsl(185, 42%, 37%);
+    --clr-shadow-key-blue: hsl(185, 58%, 25%);
+    --clr-hover-key-blue: hsl(185, 42%, 50%);
+    /*
+        -submit key
+    */
+    --clr-background-submit: hsl(25, 98%, 40%);
+    --clr-shadow-submit: hsl(25, 99%, 27%);
+    --clr-hover-submit: hsl(25, 98%, 60%);
+    --clr-submit: white;
+
+    /* Radio */
+    --clr-background-radio:hsl(25, 98%, 40%);
+    --clr-hover-radio:hsl(25, 98%, 70%);
+    /*'''''''''''''''''''''''''Text''''''''''''''''''''''''''''''''''''*/
+
+    --fs-numbers: 2rem;
+    --ff-primary: 'League Spartan', sans-serif;
+    --fw-primary: 700;
+    --clr-primary-text: hsl(60, 10%, 19%);
+}
+

@@ -8,6 +8,8 @@
   
   <title>Frontend Mentor | Calculator app</title>
 
+  <link rel="stylesheet" href="theme1.css" id="theme">
+  <link rel="stylesheet" href="base.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,12 +17,60 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1>calc</h1>
+    <div class="container1">
+      <p class="identifier">Theme</p>
+      <div>
+        <div class="themeNums">
+          <label for="one" class="num">1</label>
+          <label for="two" class="num">2</label>
+          <label for="three" class="num">3</label>
+        </div>
+        <div class="tri-way-toogle">
+          <input class="button" type="radio" name="toogle" id="one">
+          <input class="button" type="radio" name="toogle" id="two">
+          <input class="button" type="radio" name="toogle" id="three">
+        </div>
+      </div>
+    </div>
+    
+  </header>
 
+  <main>
+    <div class="screen">
+      <input type="text" id="screen" placeholder="0" readonly >
+    </div>
+    
+    <div class="keys">
+      <div class="buttonNum" onclick="getKey(this)" id="key7">7</div>
+      <div class="buttonNum" onclick="getKey(this)">8</div>
+      <div class="buttonNum" onclick="getKey(this)">9</div>
+      <div class="deleteInput" onclick="getKey(this)">del</div>
+      <div class="buttonNum" onclick="getKey(this)">4</div>
+      <div class="buttonNum" onclick="getKey(this)">5</div>
+      <div class="buttonNum" onclick="getKey(this)">6</div>
+      <div class="buttonNum op" onclick="getKey(this)">+</div>
+      <div class="buttonNum" onclick="getKey(this)">1</div>
+      <div class="buttonNum" onclick="getKey(this)">2</div>
+      <div class="buttonNum" onclick="getKey(this)">3</div>
+      <div class="buttonNum op" onclick="getKey(this)">-</div>
+      <div class="buttonNum op" onclick="getKey(this)">.</div>
+      <div class="buttonNum" onclick="getKey(this)">0</div>
+      <div class="buttonNum op" onclick="getKey(this)">/</div>
+      <div class="buttonNum op" onclick="getKey(this)">x</div>
+      <div class="reset" onclick="getKey(this)">reset</div>
+      <div class="submit" onclick="getKey(this)">=</div>
+    </div>
+  </main>
 
   
-  <div class="attribution">
+
+<script src="themes.js"></script>
+<script src="index.js"></script>
+<!--   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Bachar Elkarni</a>.
+  </div> -->
 </body>
 </html>
