@@ -1,21 +1,9 @@
 let screen = document.getElementById("screen");
-/* let key =  document.getElementById('key7');
-key.addEventListener("click",eventhandeler);
-
-function eventhandeler() 
-{
-    console.log(key.outerText);
-    screen.value+= "7";
-} */
-
 let result;
 let operands_operations = [];
 let final = [];
 function getKey(e) 
 {
-    
-
-    console.log(e.outerText);
     const list = ['deleteInput', 'reset', 'submit'];
     if (list.some(className => e.classList.contains(className))) 
     {
@@ -24,7 +12,6 @@ function getKey(e)
     else if (e.classList.contains('op')) 
     {
         final.push(operands_operations.join(''));
-        operands_operations = [];
         if (e.outerText == "x") 
         {
             final.push('*');
@@ -33,14 +20,13 @@ function getKey(e)
         {
             final.push(e.outerText);
         }
-        console.log(final);
+        operands_operations=[];
         screen.value='';
     }
     else
     {
         operands_operations.push(e.outerText);
-        screen.value+=e.outerText;
-        
+        screen.value+=e.outerText; 
     }
     
 }
@@ -51,9 +37,9 @@ function option(e)
     switch (e.outerText) 
     {
         case 'DEL':
-        screen.value =screen.value.slice(0, -1);
-        // remove from the operands_operations list
-        break;
+            screen.value =screen.value.slice(0, -1);
+            //remove the values from operator_operands
+            break;
 
         case 'RESET':
             screen.value = '';
@@ -62,10 +48,10 @@ function option(e)
             return;
         
         case '=' :
-            final.push(operands_operations.join(''));
+            console.log(operands_operations.join());
+            final.push(operands_operations.join());
+            operands_operations = [];
             console.log(final);
-            result = eval(final.join(''));
-            screen.value = result;
             break;
 
         default:
