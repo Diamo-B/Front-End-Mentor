@@ -11,8 +11,10 @@ function getKey(e)
 {
     if (list.some(l => e.classList.contains(l))) 
     {
+        
         if (e.classList.contains('op')) 
         {
+            calculated = false;
             if (!allowedOps.some(op => finalOperation[finalOperation.length-1] == op)) 
             {
                 operand=operand.join('');
@@ -24,6 +26,7 @@ function getKey(e)
         } 
         else if(e.classList.contains('dot'))
         {
+            calculated = false;
             if (!operand.includes('.')) 
             {
                 screen.value += '.'; 
@@ -37,6 +40,7 @@ function getKey(e)
     } 
     else 
     {
+        calculated = false;
         screen.value += e.outerText; 
         operand.push(e.outerText);       
     }
@@ -44,6 +48,7 @@ function getKey(e)
 
 function operation(e) 
 {
+    
     switch (e.outerText) 
     {
         case '+':
