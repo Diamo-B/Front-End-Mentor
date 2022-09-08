@@ -1,62 +1,138 @@
 let screen = document.getElementById("screen");
-let result;
-let operands_operations = [];
-let final = [];
+let list = ['deleteInput','reset','submit','op','dot'];
+let allowedOps = ['+','-','/','*'];
+let finalOperation=[];
+let operand = [];
+let result=0;
+let calculated;
+
+
 function getKey(e) 
 {
-    const list = ['deleteInput', 'reset', 'submit'];
-    if (list.some(className => e.classList.contains(className))) 
+    if (list.some(l => e.classList.contains(l))) 
     {
-        option(e);
-    }
-    else if (e.classList.contains('op')) 
-    {
-        final.push(operands_operations.join(''));
-        if (e.outerText == "x") 
+        if (e.classList.contains('op')) 
         {
-            final.push('*');
-        }
+            if (!allowedOps.some(op => finalOperation[finalOperation.length-1] == op)) 
+            {
+                operand=operand.join('');
+                finalOperation.push(operand);
+                operand = [];
+                screen.value = '';
+                operation(e);
+            }
+        } 
+        else if(e.classList.contains('dot'))
+        {
+            if (!operand.includes('.')) 
+            {
+                screen.value += '.'; 
+                operand.push('.');
+            }
+        } 
         else
         {
-            final.push(e.outerText);
+            option(e)
         }
-        operands_operations=[];
-        screen.value='';
-    }
-    else
+    } 
+    else 
     {
-        operands_operations.push(e.outerText);
-        screen.value+=e.outerText; 
+        screen.value += e.outerText; 
+        operand.push(e.outerText);       
     }
-    
 }
 
+function operation(e) 
+{
+    switch (e.outerText) 
+    {
+        case '+':
+            finalOperation.push('+');
+            break;
+        case '-':
+            finalOperation.push('-');
+            break;
+        case 'x':
+            finalOperation.push('*');
+            break;
+        case '/':
+            finalOperation.push('/');
+            break;
+        default:
+            console.log("An unexpected error has occured");
+            break;
+    }
+}
 
 function option(e) 
 {
     switch (e.outerText) 
     {
         case 'DEL':
-            screen.value =screen.value.slice(0, -1);
-            //remove the values from operator_operands
+            if (calculated === false)  
+            {
+                operand.pop();
+                screen.value = screen.value.slice(0,-1);
+            }
             break;
 
         case 'RESET':
+            finalOperation=[];
+            operand = [];
+            result = 0;
             screen.value = '';
-            operands_operations = [];
-            final=[];
-            return;
-        
+            break;
+
         case '=' :
-            console.log(operands_operations.join());
-            final.push(operands_operations.join());
-            operands_operations = [];
-            console.log(final);
+            calculated = true;
+            finalOperation.push(operand.join(''));
+            operand = [];
+            finalOperation = finalOperation.filter(e =>  e);
+            result = calculate(finalOperation);
+            screen.value = result;
             break;
 
         default:
-            console.log('An unexpected error has occured');
+            console.log("An unexpected error has occured");
             break;
+    }    
+}
+
+
+function calculate(fulloperation) 
+{
+    let littleOp; 
+    let result;
+    let divOn0 = false;
+    divOn0 = checkForDivOnZero(fulloperation);
+    if (divOn0 === true) 
+    {
+        return "Math Error: Division by 0";
+    }
+    else
+    {
+        while (fulloperation.length>=3) 
+        {
+            littleOp = fulloperation.slice(0, 3);
+            littleOp = littleOp.join('');
+            result = eval(littleOp);
+            for (let i = 0; i < 3; i++) 
+            {
+                fulloperation.shift();
+            }
+            fulloperation.unshift(result);   
+        }
+        return fulloperation;
     }
 }
-        
+
+function checkForDivOnZero (fulloperation)
+{
+    for (let i = 0; i < fulloperation.length; i++) {
+        const element = fulloperation[i];
+        const nextElement = fulloperation[i+1];
+        if (element == '/' && nextElement == '0')
+            return true;
+    }
+    return false;
+}

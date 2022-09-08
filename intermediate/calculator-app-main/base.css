@@ -85,6 +85,7 @@ html {
   margin: 0;
 }
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -216,8 +217,9 @@ main {
   background-color: var(--clr-background-keys);
   text-align: center;
   border-bottom: 3px solid var(--clr-shadow-keys);
-  border-radius: .3em;
-  padding-top: .1em;
+  border-radius: .2em;
+  padding-top: .2em;
+  padding-bottom: .1em;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -250,7 +252,7 @@ main {
 .reset,
 .submit {
   grid-column: span 2;
-  padding: .2em;
+  padding: .4em;
 }
 
 .submit {
