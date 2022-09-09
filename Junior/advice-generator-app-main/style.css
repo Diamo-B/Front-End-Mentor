@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;800&display=swap');
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root
+{
+    /*Colors*/
+    --clr-primary-LightCyan         : hsl(193,38%,86%);  /*text*/
+    --clr-primary-NeonGreen         : hsl(150,100%,66%); /*circle*/
+
+    --clr-neutral-GrayishBlue       : hsl(217,19%,38%); 
+    --clr-neutral-DarkGrayishBlue   : hsl(217,19%,24%); /*Card*/
+    --clr-neutral-DarkBlue          : hsl(218,23%,16%); /*Background*/
+
+    /*Font*/
+    --ff-primary: 'Manrope', sans-serif;
+    --fs-quote: 1.75rem;
+    --fw-primary: 800;
+}
+
+html
+{
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-primary);
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: var(--clr-neutral-DarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card
+{
+    background-color: var(--clr-neutral-DarkGrayishBlue);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-inline: 1em;
+    padding: 2em;
+    padding-bottom: 0;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    bottom: 3em;
+}
+
+.ID
+{
+    color: var(--clr-primary-NeonGreen);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 500;
+    font-size: .7rem;
+    margin-bottom: 2em;
+}
+
+.quote
+{
+    color: var(--clr-primary-LightCyan);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-primary);
+    font-size: 22px;
+}
+
+.img
+{
+    margin-top: 1em;
+}
+
+.dice
+{
+    border: none;
+    background-color: var(--clr-primary-NeonGreen);
+    padding: 1em;
+    border-radius: 50%;
+    position: relative;
+    top: 2em;
+}
+
+.dice:hover
+{
+    box-shadow: 0 0 50px var(--clr-primary-NeonGreen);
+}
+
+@media (min-width: 768px) 
+{
+    .card
+    {
+        margin-inline: 25%;
+        bottom: 0;
+    }   
+}
