@@ -18,90 +18,96 @@
   <header>
     <nav>
       <img src="images/logo.svg" alt="logo svg">
-      <a onclick="showMenu()"><img src="images/icon-menu.svg" alt="menu icon"></a>
+      <a onclick="showMenu()" class="menu-toogle"><img src="images/icon-menu.svg" alt="menu icon"></a>
+      <div class="settings">
+        <div class="close">
+          <a onclick="hideMenu()"><img src="images/icon-close-menu.svg" alt="Close Cross Image"></a>
+        </div>
+        <div class="options">
+          <div class="option">
+            <div class="row" onclick="expandMenu(this)">
+              features<img id="features"  width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
+            </div>
+            
+            <div class="expand" id="featuresExp">
+              <div class="row">
+                <img width="14px" height="16px" src="images/icon-todo.svg" alt="To-Do notebook icon"> todo list
+              </div>
+              <div class="row">
+                <img width="16px" height="16px" src="images/icon-calendar.svg" alt="To-Do notebook icon"> calendar
+              </div>
+              <div class="row">
+                <img width="13px" height="17px" src="images/icon-reminders.svg" alt="To-Do notebook icon"> reminders
+              </div>
+              <div class="row">
+                <img width="16px" height="16px" src="images/icon-planning.svg" alt="To-Do notebook icon"> planning
+              </div>
+            </div>
+          </div>
+  
+          <div class="option">
+            <div class="row" onclick="expandMenu(this)">
+              company<img id="company" width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
+            </div>
+            <div class="expand" id="companyExp">
+              <div class="row">
+                history
+              </div>
+              <div class="row">
+                our team
+              </div>
+              <div class="row">
+              blog
+              </div>
+            </div>
+          </div>
+  
+          <div class="option">
+            <div class="row">
+                <a>Careers</a>
+            </div>
+          </div>
+  
+          <div class="option">
+            <div class="row">
+              <a>About</a>
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="loginReg">
+          <a href="" class="login">login</a>
+          <a href="" class="register"><button>register</button></a>
+        </div>
+      </div>
+      <div class="black" onclick="hideMenu()">
+  
+      </div>
     </nav>
-  </header> 
-  <main>
-    <div class="settings">
-      <div class="close">
-        <a onclick="hideMenu()"><img src="images/icon-close-menu.svg" alt="Close Cross Image"></a>
-      </div>
-      <div class="options">
-        <div class="option">
-          <div class="row" onclick="expandMenu(this)">
-            features<img id="features"  width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
-          </div>
-          
-          <div class="expand" id="featuresExp">
-            <div class="row">
-              <img width="14px" height="16px" src="images/icon-todo.svg" alt="To-Do notebook icon"> todo list
-            </div>
-            <div class="row">
-              <img width="16px" height="16px" src="images/icon-calendar.svg" alt="To-Do notebook icon"> calendar
-            </div>
-            <div class="row">
-              <img width="13px" height="17px" src="images/icon-reminders.svg" alt="To-Do notebook icon"> reminders
-            </div>
-            <div class="row">
-              <img width="16px" height="16px" src="images/icon-planning.svg" alt="To-Do notebook icon"> planning
-            </div>
-          </div>
-        </div>
-
-        <div class="option">
-          <div class="row" onclick="expandMenu(this)">
-            company<img id="company" width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
-          </div>
-          <div class="expand" id="companyExp">
-            <div class="row">
-              history
-            </div>
-            <div class="row">
-              our team
-            </div>
-            <div class="row">
-            blog
-            </div>
-          </div>
-        </div>
-
-        <div class="option">
-          <div class="row">
-              <a>Careers</a>
-          </div>
-        </div>
-
-        <div class="option">
-          <div class="row">
-            <a>About</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="loginReg">
-        <a href="" class="login">login</a>
-        <a href="" class="register"><button>register</button></a>
-      </div>
-    </div>
-    <div class="black" onclick="hideMenu()">
-
-    </div>
+  </header>
+  <div class="container">
     <picture>
       <source media="(min-width: 768px)" srcset="images/image-hero-desktop.png">
       <img src="images/image-hero-mobile.png" alt="hero image">
     </picture>
-    <h1 class="title">Make remote work</h1>
-    <p class="paragraph">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-    <div class="button">
-      <button><a href="">Learn more</a></button>
+
+    <div class="container2">
+
+      <h1 class="title">Make remote work</h1>
+      <p class="paragraph">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <div class="button">
+        <button><a href="">Learn more</a></button>
+      </div>
+      <footer>
+        <i class="first"><img width="75%" src="images/client-databiz.svg" alt="Clients logos"></i>
+        <i class="second"><img width="75%" src="images/client-audiophile.svg" alt="Clients logos"></i>
+        <i><img width="75%" src="images/client-meet.svg" alt="Clients logos"></i>
+        <i><img width="75%" src="images/client-maker.svg" alt="Clients logos"></i>
+      </footer>
+      
     </div>
-  </main> 
-  <footer>
-    <i class="first"><img width="75%" src="images/client-databiz.svg" alt="Clients logos"></i>
-    <i class="second"><img width="75%" src="images/client-audiophile.svg" alt="Clients logos"></i>
-    <i><img width="75%" src="images/client-meet.svg" alt="Clients logos"></i>
-    <i><img width="75%" src="images/client-maker.svg" alt="Clients logos"></i>
-  </footer>
+
+  </div> 
 </body>
 </html>

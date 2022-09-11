@@ -101,6 +101,7 @@ nav
   padding-inline: .7em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 picture
@@ -209,17 +210,16 @@ footer
 
 .options
 {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin-left: .3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-left: .3em;
 }
 .option
 {
-
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .row
@@ -242,10 +242,9 @@ footer
 
 .loginReg
 {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .login
@@ -262,17 +261,18 @@ footer
     text-decoration: none;
     
 }
+
 .register > button
 {
-    border: 2px solid var(--clr-neutral-gray);
-    border-radius: 15px;
-    background-color: transparent;
-    padding-block: .4em;
-    margin-inline: .3em;
-    width: 100%;
-    text-transform: capitalize;
-    color: var(--clr-neutral-gray);
-    font-size: calc(var(--fs-paragraph)*0.7);
+  border: 2px solid var(--clr-neutral-gray);
+  border-radius: 15px;
+  background-color: transparent;
+  padding-block: .4em;
+  margin-inline: .3em;
+  width: 100%;
+  text-transform: capitalize;
+  color: var(--clr-neutral-gray);
+  font-size: calc(var(--fs-paragraph)*0.7);
 }
 
 @media (min-width: 768px) 
@@ -282,5 +282,114 @@ footer
     display: flex;
     flex-direction: column;
   }  
+
+  nav
+  {
+    justify-content: space-between;
+    margin-inline: 2em;
+    gap: 3em;
+  }
+
+  .menu-toogle, .close
+  {
+    display: none;
+  }
+
+  .settings
+  {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    z-index: 0;
+    text-transform: capitalize;
+    color:var(--clr-neutral-gray);
+    height: auto;
+    width: 100%;
+    gap:0;
+    margin: 0;
+    padding: 1em;
+    position:initial;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+  }
+
+  .options
+  {
+    flex-direction: row;
+    gap: 1em;
+    margin-left: 0;
+  }
+
+  .option
+  {
+    flex-direction: row;
+  }
+
+  .loginReg
+  {
+    flex-direction: row;
+  }
+
+  .register > button
+  {
+    border: 2px solid var(--clr-neutral-gray);
+    border-radius: 15px;
+    background-color: transparent;
+    padding-block: .4em;
+    margin-inline: 1em;
+    width: 100%;
+    text-transform: capitalize;
+    color: var(--clr-neutral-gray);
+    font-size: calc(var(--fs-paragraph)*0.7);
+  }
+
+  .container 
+  {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0em 10em;
+    gap: 5em;
+  }
+
+  .container2
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+    margin-top: 3em;
+  }
+
+  .title
+  {
+    font-size: calc(var(--fs-paragraph)*4);
+    text-align: left;
+    line-height: 1;
+  }
+
+  .paragraph
+  {
+    text-align: left;
+    margin: 0;
+    font-size: calc(var(--fs-paragraph)*0.95);
+    line-height: 1.5;
+    width: 90%;
+  }
+
+  footer
+  {
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  footer > i > img
+  {
+    width: 100%;
+  }
 
 }
