@@ -5,35 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet"> 
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+  <header>
+    <nav>
+      <img src="images/logo.svg" alt="logo svg">
+      <a><img src="images/icon-menu.svg" alt="menu icon"></a>
+    </nav>
+  </header> 
+  <main>
+    <div class="settings">
+      <div class="close">
+        <a><img src="images/icon-close-menu.svg" alt="Close Cross Image"></a>
+      </div>
+      <div class="options">
+        <div class="option">
+          <div class="row">
+            features<img width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
+          </div>
+          
+          <div class="expand">
+            <div class="row">
+              <img width="14px" height="16px" src="images/icon-todo.svg" alt="To-Do notebook icon"> todo list
+            </div>
+            <div class="row">
+              <img width="16px" height="16px" src="images/icon-calendar.svg" alt="To-Do notebook icon"> calendar
+            </div>
+            <div class="row">
+              <img width="13px" height="17px" src="images/icon-reminders.svg" alt="To-Do notebook icon"> reminders
+            </div>
+            <div class="row">
+              <img width="16px" height="16px" src="images/icon-planning.svg" alt="To-Do notebook icon"> planning
+            </div>
+          </div>
+        </div>
 
-  Features
-  Company
-  Careers
-  About
+        <div class="option">
+          <div class="row">
+            company<img width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
+          </div>
+          <div class="expand">
+            <div class="row">
+              history
+            </div>
+            <div class="row">
+              our team
+            </div>
+            <div class="row">
+            blog
+            </div>
+          </div>
+        </div>
 
-  Login
-  Register
+        <div class="option">
+          <div class="row">
+              <a>Careers</a>
+          </div>
+        </div>
 
-  Make remote work
+        <div class="option">
+          <div class="row">
+            <a>About</a>
+          </div>
+        </div>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+      </div>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="loginReg">
+        <a href="" class="login">login</a>
+        <a href="" class="register"><button>register</button></a>
+      </div>
+    </div>
+    <div class="black">
+
+    </div>
+    <picture>
+      <source media="(min-width: 768px)" srcset="images/image-hero-desktop.png">
+      <img src="images/image-hero-mobile.png" alt="hero image">
+    </picture>
+    <h1 class="title">Make remote work</h1>
+    <p class="paragraph">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+    <div class="button">
+      <button><a href="">Learn more</a></button>
+    </div>
+  </main> 
+  <footer>
+    <i class="first"><img width="75%" src="images/client-databiz.svg" alt="Clients logos"></i>
+    <i class="second"><img width="75%" src="images/client-audiophile.svg" alt="Clients logos"></i>
+    <i><img width="75%" src="images/client-meet.svg" alt="Clients logos"></i>
+    <i><img width="75%" src="images/client-maker.svg" alt="Clients logos"></i>
+  </footer>
 </body>
 </html>
