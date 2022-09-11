@@ -11,27 +11,28 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
 
 </head>
 <body>
   <header>
     <nav>
       <img src="images/logo.svg" alt="logo svg">
-      <a><img src="images/icon-menu.svg" alt="menu icon"></a>
+      <a onclick="showMenu()"><img src="images/icon-menu.svg" alt="menu icon"></a>
     </nav>
   </header> 
   <main>
     <div class="settings">
       <div class="close">
-        <a><img src="images/icon-close-menu.svg" alt="Close Cross Image"></a>
+        <a onclick="hideMenu()"><img src="images/icon-close-menu.svg" alt="Close Cross Image"></a>
       </div>
       <div class="options">
         <div class="option">
-          <div class="row">
-            features<img width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
+          <div class="row" onclick="expandMenu(this)">
+            features<img id="features"  width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
           </div>
           
-          <div class="expand">
+          <div class="expand" id="featuresExp">
             <div class="row">
               <img width="14px" height="16px" src="images/icon-todo.svg" alt="To-Do notebook icon"> todo list
             </div>
@@ -48,10 +49,10 @@
         </div>
 
         <div class="option">
-          <div class="row">
-            company<img width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
+          <div class="row" onclick="expandMenu(this)">
+            company<img id="company" width="10px" height="6px" src="images/icon-arrow-down.svg" alt="arrow"></i></a>
           </div>
-          <div class="expand">
+          <div class="expand" id="companyExp">
             <div class="row">
               history
             </div>
@@ -83,7 +84,7 @@
         <a href="" class="register"><button>register</button></a>
       </div>
     </div>
-    <div class="black">
+    <div class="black" onclick="hideMenu()">
 
     </div>
     <picture>
