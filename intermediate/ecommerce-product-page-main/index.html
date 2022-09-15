@@ -18,65 +18,123 @@
       rel="stylesheet"
     />
     <title>Frontend Mentor | E-commerce product page</title>
-    <script src="https://kit.fontawesome.com/f6a25db151.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/f6a25db151.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
   <body>
     <header>
       <nav class="navbar">
-        <img src="./images/icon-menu.svg" alt="menu" />
-            
-        <nav class="center__nav">
-            <img src="./images/logo.svg" alt="logo" />
-            <img src="./images/icon-cart.svg" alt="cart" />
-        </nav>
-        
-        <img class="avatar" src="./images/image-avatar.png" alt="avatar"/>
+        <img class="menu-icon" src="./images/icon-menu.svg" alt="menu" />
+        <div class="center__nav">
+          <img class="logo" src="./images/logo.svg" alt="logo" />
+          <div class="cart-iconbox">
+            <img class="cart-icon" src="./images/icon-cart.svg" alt="cart" />
+            <div>3</div>
+          </div>
+        </div>
+        <img class="avatar" src="./images/image-avatar.png" alt="avatar" />
       </nav>
+      <div class="menu">
+        <div class="menu__items">
+          <img src="./images/icon-close.svg" alt="close menu" />
+          <div class="items">
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="menu__shadow"></div>
+      </div>
+
+      <div class="cart-expanded">
+        <div class="cart">
+          <div class="cart__title">
+            <h3>cart</h3>
+          </div>
+          <div class="cart__content">
+            <p class="cart__empty">Your cart is empty.</p>
+            <div class="cart__items">
+              <div class="item__image">
+                <img
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt="product thumbnail"
+                />
+              </div>
+              <div class="item__desc">
+                <p>Autumn Limited Edition...</p>
+                <p>
+                  $125.00 x <span>3</span> =
+                  <strong>$<span>375.00</span></strong>
+                </p>
+              </div>
+              <img src="./images/icon-delete.svg" alt="delete item" />
+            </div>
+          </div>
+          <button class="checkoutBtn">Checkout</button>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section class="align_vertical">
-            <img class="product_image" src="./images/image-product-1.jpg" alt="product image">
-            <div class="arrows">
-                <div class="arrow">
-                    <i class="fa-solid fa-angle-left"></i>
-                </div>
-                <div class="arrow">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-            </div>
-        </section>
-
-        <section class="text container">
-            <h3 class="sub-title">sneaker company</h3>
-            <h1 class="title">fall limited edition sneakers</h1>
-            <p class="paragraph">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-        </section>
-
-        <section class="container pricing">
-            <div class="pricing__primary">
-                <span class="actualPrice">$125.00</span>
-                <span class="Reduction">50%</span>
-            </div>
-
-            <div class="pricing__secondary">
-                <span>$250.00</span>
-            </div>
-        </section>
-
-        <section class="container quantity">
-            <span class="changeAmount">-</span>
-            <span class="amount">0</span>
-            <span class="changeAmount">+</span>
-        </section>
-
-        <div class="container submit">
-            <button class="add_cart">
-                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>
-                Add to cart
-            </button>
+      <section class="align_vertical">
+        <img
+          class="product_image"
+          src="./images/image-product-1.jpg"
+          alt="product image"
+        />
+        <div class="arrows">
+          <div class="arrow">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="arrow">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
         </div>
-        
+      </section>
+
+      <section class="text container">
+        <h3 class="sub-title">sneaker company</h3>
+        <h1 class="title">fall limited edition sneakers</h1>
+        <p class="paragraph">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+      </section>
+
+      <section class="container pricing">
+        <div class="pricing__primary">
+          <span class="actualPrice">$125.00</span>
+          <span class="Reduction">50%</span>
+        </div>
+
+        <div class="pricing__secondary">
+          <span>$250.00</span>
+        </div>
+      </section>
+
+      <section class="container quantity">
+        <span class="changeAmount">-</span>
+        <span class="amount">0</span>
+        <span class="changeAmount">+</span>
+      </section>
+
+      <div class="container submit">
+        <button class="button">
+          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#fff"
+              fill-rule="nonzero"
+            />
+          </svg>
+          Add to cart
+        </button>
+      </div>
     </main>
   </body>
 </html>
