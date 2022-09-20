@@ -123,13 +123,16 @@ function changeImage(action, _focus=null)
     if (_focus == null) 
     {
         currentFull = document.getElementById('currentImage');
-        current = currentFull.src.slice(57);
+        let splittedFull = currentFull.src.split("/");
+        current = splittedFull[splittedFull.length-1];
+        console.log(current);
         indexOfCurrent = productImages.indexOf(current);
     }
     else
     {
         currentFull = document.getElementById('currentFocus');
-        current = currentFull.src.slice(57);
+        let splittedFull = currentFull.src.split("/");
+        current = splittedFull[splittedFull.length-1];
         indexOfCurrent = productImages.indexOf(current);
     }
     if (action == "prev" || action == "focusPrev") 
@@ -156,7 +159,8 @@ function changeImage(action, _focus=null)
 function replaceMainImage(e)
 {
     let mainSpace = document.getElementById('currentImage');
-    let replacement = e.src.slice(57);
+    let splittedFull = e.src.split("/");
+    let replacement = splittedFull[splittedFull.length-1];
     replacement = replacement.replaceAll('-thumbnail', '');
     mainSpace.src = "./images/"+replacement;
 }
@@ -164,7 +168,8 @@ function replaceMainImage(e)
 function replaceFocusImage(e)
 {
     let FocusBigSpace = document.getElementById('currentFocus');
-    let replacement = e.src.slice(57);
+    let splittedFull = e.src.split("/");
+    let replacement = splittedFull[splittedFull.length-1];
     replacement = replacement.replaceAll('-thumbnail', '');
     FocusBigSpace.src = "./images/"+replacement;
 }
