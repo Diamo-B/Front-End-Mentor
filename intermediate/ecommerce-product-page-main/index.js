@@ -12,6 +12,7 @@ function handleTabletChange(e)
     menu = document.querySelector('.categories');
     let cart_expansion_items = document.querySelector('.cart--expansion__items')
     let cart_item_text = document.querySelectorAll('.item__label');
+    let focusToggle = document.getElementById('currentImage');
     if (e.matches) 
     {
         /*desktop size*/
@@ -20,6 +21,8 @@ function handleTabletChange(e)
             e.innerHTML = "Fall Limited Edition Sneakers";
         });
         cart_expansion_items.classList.remove('margin-inline');
+        focusToggle.attributes.onclick.value = "focusOpen()";
+        console.log(focusToggle.attributes.onclick);
     }
     else
     {
@@ -28,6 +31,8 @@ function handleTabletChange(e)
             e.innerHTML = "Autumn Limited Edition...";
         });
         cart_expansion_items.classList.add('margin-inline');
+        focusToggle.attributes.onclick.value = "";
+        console.log(focusToggle.attributes.onclick);
     }
 }
 
