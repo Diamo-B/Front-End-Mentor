@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./css/output.css" rel="stylesheet">
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body class="bg-Magnolia relative">
+    <img src="./assets/images/bg-sidebar-mobile.svg" alt="bg">
+    <div class=" z-50 -mt-[135px] w-full flex justify-center gap-5">
+      <div class="text-white border-1 rounded-full py-0.5 px-custom font-semibold">1</div>
+      <div class="text-white border-1 rounded-full py-0.5 px-custom font-semibold ">2</div>
+      <div class="text-white border-1 rounded-full py-0.5 px-custom font-semibold">3</div>
+      <div class="text-white border-1 rounded-full py-0.5 px-custom font-semibold active">4</div>
+    </div>
+    <form method="post">
+    <div class="mt-8 bg-white border-white border-solid border-4 rounded-lg px-5 py-5 mx-5 shadow-xl z-40 relative">
+        <h1 class="text-2xl text-Marine-blue font-bold">Finishing up</h1>
+        <p class="text-base text-Cool-gray">Double-check everything looks OK before confirming.</p>
+        <div class="mt-5 flex flex-col gap-4">
+            <div class="bg-Magnolia p-3">
+                <div class="flex justify-between items-center border-b-2 pb-2">
+                    <div>
+                        <p class="text-Marine-blue font-semibold text-sm">Arcade (Monthly)</p>
+                        <a class="text-Cool-gray font-light text-sm underline decoration-2">Change</a>
+                    </div>
+                    <p class="font-semibold text-Marine-blue text-sm">$9/mo</p>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <p class="text-sm text-Cool-gray">Online service</p>
+                    <p class="text-sm text-Marine-blue">+$1/mo</p>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <p class="text-sm text-Cool-gray">Larger storage</p>
+                    <p class="text-sm text-Marine-blue">+$2/mo</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center mx-3">
+                <p class="text-sm text-Cool-gray">Total (per month)</p>
+                <p class="font-semibold text-sm text-Purplish-blue">+$12/mo</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="bg-white flex justify-between p-5 w-full nextPanel">
+        <button class="text-Cool-gray font-semibold text-sm">
+            Go Back
+        </button>
+        <button class="px-5 text-white font-medium text-sm bg-Purplish-blue py-2 rounded-md" type="submit">
+            Confirm
+        </button>
+    </div>
+  </body>
+</html>

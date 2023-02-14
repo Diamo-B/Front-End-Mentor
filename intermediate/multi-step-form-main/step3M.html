@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./css/output.css" rel="stylesheet">
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body class="bg-Magnolia relative">
+    <img src="./assets/images/bg-sidebar-mobile.svg" alt="bg">
+    <div class=" z-50 -mt-[135px] w-full flex justify-center gap-5">
+      <div class="text-white border-1 rounded-full py-0.5 px-custom font-semibold">1</div>
+      <div class="text-white border-1 rounded-full py-0.5 px-custom font-semibold ">2</div>
+      <div class="text-white border-1 rounded-full py-0.5 px-custom font-semibold active">3</div>
+      <div class="text-white border-1 rounded-full py-0.5 px-custom font-semibold">4</div>
+    </div>
+    <form method="post">
+    <div class="mt-8 bg-white border-white border-solid border-4 rounded-lg px-5 py-5 mx-5 shadow-xl z-40 relative">
+        <h1 class="text-2xl text-Marine-blue font-bold">Pick add-ons</h1>
+        <p class="text-base text-Cool-gray">Add-ons help enhance your gaming experience.</p>
+        <div class="mt-5 flex flex-col gap-4">
+            <div class="w-full flex items-center border-1 rounded-md p-3 gap-4 bg-Magnolia border-Purplish-blue">
+                <input type="checkbox" name="" id="">
+                <div>
+                    <p class="text-Marine-blue font-bold text-sm">Online service</p>
+                    <p class="font-light text-xs">Access to multiplater games</p>
+                </div>
+                <p class="text-sm ml-auto text-Purplish-blue font-medium">+$1/mo</p>
+            </div>
+            <div class="w-full flex justify-start items-center border-1 rounded-md p-3 gap-4">
+                <input type="checkbox" name="" id="">
+                <div>
+                    <p class="text-Marine-blue font-bold text-sm">Larger storage</p>
+                    <p class="font-light text-xs">Extra 1TB of cloud save</p>
+                </div>
+                <p class="text-sm ml-auto text-Purplish-blue font-medium">+$2/mo</p>
+            </div>
+            <div class="w-full flex justify-start items-center border-1 rounded-md p-3 gap-4">
+                <input type="checkbox" name="" id="">
+                <div>
+                    <p class="text-Marine-blue font-bold text-sm">Customizable profile</p>
+                    <p class="font-light text-xs">Custom theme on your profile</p>
+                </div>
+                <p class="text-sm ml-auto text-Purplish-blue font-medium">+$2/mo</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="bg-white flex justify-between p-5 w-full nextPanel">
+        <button class="text-Cool-gray font-semibold text-sm">
+            Go Back
+        </button>
+        <button class="text-white font-medium text-sm bg-Marine-blue py-2 px-3 rounded-md" type="submit">
+            Next Step
+        </button>
+    </div>
+  </body>
+</html>

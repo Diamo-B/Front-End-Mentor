@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./css/output.css" rel="stylesheet" />
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body
+    class="bg-Magnolia relative w-screen h-screen md:flex md:justify-center md:items-center"
+  >
+    <div class="md:grid md:grid-cols-3 md:bg-white">
+      <div class="md:m-3 relative">
+        <img
+          src="./assets/images/bg-sidebar-desktop.svg"
+          alt="bg"
+          class="md:h-[97%]"
+          id="image"
+        />
+        <div
+          class="z-50 -mt-[130px] w-full flex justify-center gap-5 md:flex md:flex-col md:w-fit md:m-10 md:absolute md:top-0 md:gap-10"
+        >
+          <div class="md:flex md:gap-3 md:items-center">
+            <div
+              class="w-9 h-9 rounded-full border-1 text-white flex justify-center items-center"
+            >
+              <p class="font-semibold text-sm">1</p>
+            </div>
+            <div class="max-sm:hidden">
+              <p class="uppercase text-Light-gray text-xs">Step 1</p>
+              <p
+                class="uppercase text-white text-sm font-semibold tracking-wide"
+              >
+                Your Info
+              </p>
+            </div>
+          </div>
+          <div class="md:flex md:gap-3 md:items-center">
+            <div
+              class="w-9 h-9 rounded-full border-1 text-white flex justify-center items-center active"
+            >
+              <p class="font-semibold text-sm">2</p>
+            </div>
+            <div class="max-sm:hidden">
+              <p class="uppercase text-Light-gray text-xs">Step 2</p>
+              <p
+                class="uppercase text-white text-sm font-semibold tracking-wide"
+              >
+                Select Plan
+              </p>
+            </div>
+          </div>
+          <div class="md:flex md:gap-3 md:items-center">
+            <div
+              class="w-9 h-9 rounded-full border-1 text-white flex justify-center items-center"
+            >
+              <p class="font-semibold text-sm">3</p>
+            </div>
+            <div class="max-sm:hidden">
+              <p class="uppercase text-Light-gray text-xs">Step 3</p>
+              <p
+                class="uppercase text-white text-sm font-semibold tracking-wide"
+              >
+                Add-ons
+              </p>
+            </div>
+          </div>
+          <div class="md:flex md:gap-3 md:items-center">
+            <div
+              class="w-9 h-9 rounded-full border-1 text-white flex justify-center items-center"
+            >
+              <p class="font-semibold text-sm">4</p>
+            </div>
+            <div class="max-sm:hidden">
+              <p class="uppercase text-Light-gray text-xs">Step 4</p>
+              <p
+                class="uppercase text-white text-sm font-semibold tracking-wide"
+              >
+                Summary
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-8 bg-white border-white border-solid border-4 rounded-lg px-5 py-5 mx-5 shadow-xl z-40 relative md:col-span-2  md:bg-transparent md:shadow-none md:border-none"
+      >
+        <h1 class="text-2xl text-Marine-blue font-bold">Select your plan</h1>
+        <p class="text-base text-Cool-gray">
+          You have the option of monthly or yearly billing.
+        </p>
+        <div class="mt-5 flex flex-col gap-4 md:grid md:grid-cols-3">
+          <div
+            class="w-full flex justify-start items-center border-1 rounded-md p-3 gap-4 bg-Magnolia border-Purplish-blue"
+          >
+            <img src="./assets/images/icon-arcade.svg" alt="icon"/>
+            <div>
+              <p class="text-Marine-blue text-base font-bold">Arcade</p>
+              <p class="text-sm text-Cool-gray">$9/mo</p>
+            </div>
+          </div>
+          <div
+            class="w-full flex justify-start items-center border-1 rounded-md p-3 gap-4"
+          >
+            <img src="./assets/images/icon-advanced.svg" alt="icon"/>
+            <div>
+              <p class="text-Marine-blue text-base font-bold">Advanced</p>
+              <p class="text-sm text-Cool-gray">$12/mo</p>
+            </div>
+          </div>
+          <div
+            class="w-full flex justify-start items-center border-1 rounded-md p-3 gap-4"
+          >
+            <img src="./assets/images/icon-pro.svg" alt="icon"/>
+            <div>
+              <p class="text-Marine-blue text-base font-bold">Pro</p>
+              <p class="text-sm text-Cool-gray">$15/mo</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-5 p-2 flex justify-center gap-5 w-full bg-Magnolia rounded-md"
+        >
+          <p class="text-sm font-semibold text-Marine-blue">Monthly</p>
+          <label for="toogleA" class="flex items-center cursor-pointer">
+            <!-- toggle -->
+            <div class="relative">
+              <!-- input -->
+              <input id="toogleA" type="checkbox" class="sr-only" />
+              <!-- line -->
+              <div
+                class="w-8 h-4 rounded-full shadow-inner bg-Marine-blue"
+              ></div>
+              <!-- dot -->
+              <div
+                class="dot absolute w-3 h-3 bg-white rounded-full shadow left-1 top-0.5 transition"
+              ></div>
+            </div>
+          </label>
+          <p class="text-sm font-medium text-Cool-gray">Yearly</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white flex justify-between p-5 w-full nextPanel md:hidden">
+      <button class="text-Cool-gray font-semibold text-sm">Go Back</button>
+      <button
+        class="text-white font-medium text-sm bg-Marine-blue py-2 px-3 rounded-md"
+        type="submit"
+      >
+        Next Step
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+/* body
+{
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+} */
+
+html
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg-Magnolia
+{
+    background-color:hsl(217, 100%, 97%)
+}
+
+.text-Marine-blue
+{
+    color:hsl(213, 96%, 18%);
+}
+
+.bg-Marine-blue
+{
+    background-color:hsl(213, 96%, 18%);
+}
+
+
+.text-Purplish-blue
+{
+    color:hsl(243, 100%, 62%);
+}
+
+.text-Pastel-blue
+{
+    color: hsl(228, 100%, 84%);
+}
+
+.bg-Purplish-blue
+{
+    background-color:hsl(243, 100%, 62%);
+}
+
+.bg-Pastel-blue
+{
+    background-color: hsl(228, 100%, 84%);
+}
+
+.text-Cool-gray{
+    
+    color: hsl(231, 11%, 63%);
+} 
+
+.text-Light-gray
+{
+    color: hsl(229, 24%, 87%);
+}
+
+.border-Light-gray
+{
+    border-color: hsl(229, 24%, 87%);
+}
+
+.border-Purplish-blue
+{
+    border-color: hsl(243, 100%, 62%);
+}
+
+.rounded-mehdi
+{
+    border-radius: 3px;
+}
+
+.border-1
+{
+    border-width: 1px;
+}
+
+.-mt-18
+{
+    margin-top: -74px;
+}
+
+.px-custom
+{
+    padding-inline: 10px;
+}
+
+.px-custom:first-of-type
+{
+    padding-inline: 11.5px;
+}
+
+.active
+{
+    border-color: transparent;
+    color: hsl(213, 96%, 18%);
+    background-color: hsl(206, 94%, 87%);
+}
+
+/* .nextPanel{
+    margin-top: auto;
+} */
+
+.nextPanel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Toggle A */
+input:checked ~ .dot 
+{
+    transform: translateX(100%);
+}
+  

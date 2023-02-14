@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./css/output.css" rel="stylesheet">
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body class="bg-Magnolia relative w-screen h-screen md:flex md:justify-center md:items-center">
+    <div class="md:grid md:grid-cols-3 md:bg-white">
+      <div class="md:m-3 relative">
+        <img src="./assets/images/bg-sidebar-mobile.svg" alt="bg" class="md:h-[97%]" id="image">
+        <div class=" z-50 -mt-[130px] w-full flex justify-center gap-5 md:flex md:flex-col md:w-fit md:m-10 md:absolute md:top-0 md:gap-10 ">
+          <div class="md:flex md:gap-3 md:items-center">
+            <div class="w-9 h-9 rounded-full border-1 text-white flex justify-center items-center active">
+              <p class="font-semibold text-sm">1</p>
+            </div>
+            <div class="max-sm:hidden">
+              <p class="uppercase text-Light-gray text-xs">Step 1</p>
+              <p class="uppercase text-white text-sm font-semibold tracking-wide">Your Info</p>
+            </div>
+          </div>
+          <div class="md:flex md:gap-3 md:items-center">
+            <div class="w-9 h-9 rounded-full border-1 text-white flex justify-center items-center">
+              <p class="font-semibold text-sm">2</p>
+            </div>
+            <div class="max-sm:hidden">
+              <p class="uppercase text-Light-gray text-xs">Step 2</p>
+              <p class="uppercase text-white text-sm font-semibold tracking-wide">Select Plan</p>
+            </div>
+          </div>
+          <div class="md:flex md:gap-3 md:items-center">
+            <div class="w-9 h-9 rounded-full border-1 text-white flex justify-center items-center">
+              <p class="font-semibold text-sm">3</p>
+            </div>
+            <div class="max-sm:hidden">
+              <p class="uppercase text-Light-gray text-xs">Step 3</p>
+              <p class="uppercase text-white text-sm font-semibold tracking-wide">Add-ons</p>
+            </div>
+            </div>
+          <div class="md:flex md:gap-3 md:items-center">
+            <div class="w-9 h-9 rounded-full border-1 text-white flex justify-center items-center">
+              <p class="font-semibold text-sm">4</p>
+            </div>
+            <div class="max-sm:hidden">
+              <p class="uppercase text-Light-gray text-xs">Step 4</p>
+              <p class="uppercase text-white text-sm font-semibold tracking-wide">Summary </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="mt-8 bg-white border-white border-solid border-4 rounded-lg px-5 py-5 mx-5 shadow-xl z-40 relative md:bg-transparent md:shadow-none md:border-none">
+          <h1 class="text-2xl text-Marine-blue font-bold md:text-3xl md:mb-3">Personal info</h1>
+          <p class="text-base text-Cool-gray md:font-medium md:mb-5">Please provide your name, email address and phone number.</p>
+
+          <label for="name" class="text-xs text-Marine-blue font-medium md:text-sm md:font-medium">Name</label>
+          <input type="text" name="name" id="name" placeholder="e.g. Stephen King" class="text-Cool-gray text-base font-medium border-1 .border-Light-gray w-full px-3 py-1 rounded-mehdi mt-2 mb-3"></br>
+          <label for="name" class="text-xs text-Marine-blue font-medium md:text-sm md:font-medium">Email Address</label></br>
+          <input type="text" name="name" id="name" placeholder="e.g. stephenking@lorem.com" class="text-Cool-gray text-base font-medium border-1 border-Light-gray w-full px-3 py-1 rounded-mehdi mt-2 mb-3"></br>
+          <label for="name" class="text-xs text-Marine-blue font-medium md:text-sm md:font-medium">Phone Number</label></br>
+          <input type="text" name="name" id="name" placeholder="e.g. +1 234 567 890" class="text-Cool-gray text-base font-medium border-1 border-Light-gray w-full px-3 py-1 rounded-mehdi mt-2 mb-3"></br>
+        </div>
+        <div class="bg-white flex justify-end p-5 w-full max-sm:nextPanel md:mt-20">
+          <button class="text-white font-medium text-sm bg-Marine-blue py-2 px-3 rounded-md" type="submit">
+            Next Step
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/changeImage.js"></script>
+  </body>
+</html>
